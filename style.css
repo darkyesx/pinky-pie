@@ -14,6 +14,7 @@ header {
   position: fixed;
   border-radius: 40px;
   top: 10px;
+  display: flex;
   align-items: center;
   background: rgb(22, 34, 57);
   z-index: 1;
@@ -592,6 +593,7 @@ footer a:hover {
     text-align: center;
   }
 }
+
 
 
 
