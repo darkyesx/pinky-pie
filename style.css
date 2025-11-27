@@ -9,12 +9,12 @@ body {
 }
 
 header {
-  width: 95vw;
+  width: 96vw;
   height: 40px;
   position: fixed;
   border-radius: 40px;
   top: 10px;
-  margin: auto;
+  left: 20px;
   background: rgb(22, 34, 57);
   z-index: 1;
 }
@@ -592,6 +592,7 @@ footer a:hover {
     text-align: center;
   }
 }
+
 
 
 
