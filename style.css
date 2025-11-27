@@ -9,30 +9,15 @@ body {
 }
 
 header {
-  text-align: center;
-  margin: 50px auto 30px auto; /* отступ сверху 50px, снизу 30px, по бокам auto */
-  padding: 20px 40px;
-  max-width: 80%; /* отступы по бокам - ограничиваем ширину */
-    
-    /* Создаем овальную линию */
-  border: 2px solid #333; /* цвет и толщина линии */
-  border-radius: 50%; /* делаем овальную форму */
-    
-    /* Дополнительные стили для текста *
-  font-size: 24px;
-  font-weight: bold;color: #333;
+  width: 100vw;
+  height: 75px;
+  position: fixed;
+  top: 0;
+  background: rgb(22, 34, 57);
+  z-index: 1;
 }
 
-/* Для адаптивности на мобильных устройствах */
-@media (max-width: 768px) {
-    .header {
-        margin: 30px auto 20px auto;
-        max-width: 90%;
-        padding: 15px 20px;
-        font-size: 18px;
-    }
-
-nav {
+  nav {
   text-align: center;
   padding: 30px;
   height: 90px;
@@ -605,4 +590,5 @@ footer a:hover {
     text-align: center;
   }
 }
+
 
