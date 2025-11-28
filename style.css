@@ -10,18 +10,17 @@ body {
 
 header {
   width: 100vw;
-  height: 40px;
+  height: 75px;
   position: fixed;
-  border-radius: 40px;
-  top: 10px;
+  top: 0;
   background: rgb(22, 34, 57);
   z-index: 1;
 }
 
-  nav {
+nav {
   text-align: center;
-  padding: 40px;
-  height: 20px;
+  padding: 30px;
+  height: 90px;
 }
 
 #side-bar {
@@ -591,11 +590,3 @@ footer a:hover {
     text-align: center;
   }
 }
-
-
-
-
-
-
-
-
