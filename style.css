@@ -135,7 +135,7 @@ section {
 .avatar {
   width: 300px;
   height: 300px;
-  border-radius: 50%;
+  border-radius: 10%;
   object-fit: cover;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s;
@@ -595,4 +595,5 @@ footer a:hover {
     text-align: center;
   }
 }
+
 
