@@ -594,6 +594,320 @@ footer a:hover {
     font-size: 12px;
     text-align: center;
   }
+
+  .smartjar-open-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+    z-index: 9998;
 }
+
+.smartjar-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.smartjar-modal-content {
+    background: white;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    animation: smartjar-modal-appear 0.3s;
+}
+
+@keyframes smartjar-modal-appear {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.smartjar-modal-header {
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.smartjar-modal-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #2c3e50;
+}
+
+.smartjar-close-modal,
+.smartjar-close-add-modal {
+    font-size: 28px;
+    cursor: pointer;
+    color: #777;
+    line-height: 1;
+}
+
+.smartjar-close-modal:hover,
+.smartjar-close-add-modal:hover {
+    color: #333;
+}
+
+.smartjar-modal-body {
+    padding: 20px;
+}
+
+.smartjar-tabs {
+    display: flex;
+    border-bottom: 1px solid #eee;
+    padding: 0 20px;
+}
+
+.smartjar-tab-btn {
+    padding: 12px 20px;
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    cursor: pointer;
+    font-weight: 500;
+    color: #555;
+    transition: all 0.3s;
+}
+
+.smartjar-tab-btn.active {
+    border-bottom-color: #3498db;
+    color: #3498db;
+}
+
+.smartjar-tab-content {
+    display: none;
+    padding-top: 20px;
+}
+
+.smartjar-tab-content.active {
+    display: block;
+}
+
+.smartjar-form-group {
+    margin-bottom: 15px;
+}
+
+.smartjar-form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #333;
+}
+
+.smartjar-form-group input,
+.smartjar-form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.smartjar-btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s;
+    font-size: 14px;
+}
+
+.smartjar-btn-primary {
+    background: #3498db;
+    color: white;
+    width: 100%;
+}
+
+.smartjar-btn-primary:hover {
+    background: #2980b9;
+}
+
+.smartjar-btn-success {
+    background: #2ecc71;
+    color: white;
+}
+
+.smartjar-btn-success:hover {
+    background: #27ae60;
+}
+
+.smartjar-jars-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.smartjar-jars-header h3 {
+    margin: 0;
+}
+
+.smartjar-jars-container {
+    min-height: 200px;
+}
+
+.smartjar-no-jars {
+    text-align: center;
+    padding: 40px 20px;
+    color: #777;
+}
+
+.smartjar-no-jars i {
+    font-size: 48px;
+    color: #ddd;
+    margin-bottom: 15px;
+}
+
+.smartjar-jar-card {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-left: 4px solid #3498db;
+}
+
+.smartjar-jar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.smartjar-jar-name {
+    font-weight: bold;
+    color: #2c3e50;
+    margin: 0;
+}
+
+.smartjar-jar-type {
+    background: #e8f4fc;
+    color: #3498db;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+}
+
+.smartjar-jar-level {
+    margin-bottom: 15px;
+}
+
+.smartjar-level-text {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.smartjar-level-bar {
+    height: 8px;
+    background: #ecf0f1;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.smartjar-level-fill {
+    height: 100%;
+    border-radius: 4px;
+}
+
+.smartjar-level-low { background: #e74c3c; }
+.smartjar-level-medium { background: #f39c12; }
+.smartjar-level-high { background: #2ecc71; }
+
+.smartjar-jar-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 15px;
+    font-size: 13px;
+}
+
+.smartjar-jar-info-item {
+    text-align: center;
+}
+
+.smartjar-jar-info-label {
+    color: #777;
+    margin-bottom: 3px;
+}
+
+.smartjar-jar-info-value {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.smartjar-jar-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.smartjar-action-btn {
+    background: none;
+    border: none;
+    color: #3498db;
+    cursor: pointer;
+    font-size: 13px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.smartjar-action-btn:hover {
+    background: #f5f5f5;
+}
+
+.smartjar-action-delete {
+    color: #e74c3c;
+}
+
+.smartjar-logged-in-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    background: #f8f9fa;
+    border-top: 1px solid #eee;
+}
+
+.smartjar-logged-in-user {
+    flex: 1;
+    font-size: 14px;
+}
+
+.smartjar-logout-btn {
+    background: none;
+    border: none;
+    color: #e74c3c;
+    cursor: pointer;
+    font-size: 13px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.smartjar-logout-btn:hover {
+    background: rgba(231, 76, 60, 0.1);
+}
+}
+
 
 
