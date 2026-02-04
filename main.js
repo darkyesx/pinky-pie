@@ -20,6 +20,7 @@ function sendForm() {
       break;
     }
   }
+
   if (!allowForm) {
     alert("Пожалуйста, введите все данные");
   } else {
