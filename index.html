@@ -155,6 +155,7 @@
             name="name"
             type="text"
             placeholder="Введите ваше имя"
+            required
           />
 
           <label for="age">Количество баночек</label>
@@ -163,6 +164,7 @@
             name="age"
             type="number"
             placeholder="Введите количество для заказа"
+            required
           />
 
           <label for="email">Ваш e-mail</label>
@@ -171,6 +173,7 @@
             name="email"
             type="email"
             placeholder="example@mail.ru"
+            required
           />
 
           <label for="message">Ваше сообщение</label>
@@ -178,11 +181,13 @@
             id="message"
             name="message"
             placeholder="Опишите свой заказ или задайте вопрос"
+            required
           ></textarea>
         </form>
         <button id="button" class="form-btn" onclick="sendForm()">Отправить</button>
       </section>
     </main>
+    
     <footer>
       <div class="footer-content">
         <div class="footer-links">
@@ -195,4 +200,7 @@
           <a href="https://t.me/smartjar" class="social-link" target="_blank">Telegram</a>
         </div>
       </div>
+    </footer>
+    <script src="main.js"></script>
+  </body>
 </html>
