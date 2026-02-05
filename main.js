@@ -1,5 +1,3 @@
-[file name]: main.js
-[file content begin]
 let name = document.getElementById("name");
 let age = document.getElementById("age");
 let email = document.getElementById("email");
@@ -12,27 +10,25 @@ let button = document.getElementById("button");
 let sideBar = document.getElementById("side-bar");
 let allowForm = true;
 
-const CHAT_ID = "1682195869";
-const BOT_TOKEN = "8129002117:AAFsEYM6PGd1U8oaARgUtFwHC3dSMWcIsxU";
+const CHAT_ID = "1682195869"
+const BOT_TOKEN = "8129002117:AAFsEYM6PGd1U8oaARgUtFwHC3dSMWcIsxU"
 
 function sendForm() {
-  allowForm = true; // Сбрасываем значение каждый раз при отправке
-  
   for (let i = 0; i < inputs.length; i++) {
-    if (inputs[i].value.trim() === "") {
+    if (inputs[i].value === "") {
       allowForm = false;
       break;
     }
   }
-  
+
   if (!allowForm) {
     alert("Пожалуйста, введите все данные");
-    return false; // Прерываем выполнение
   } else {
+
     const data = {
       chat_id: CHAT_ID,
-      text: `New offer:\nИмя: ${name.value}\nКоличество: ${age.value}\nEmail: ${email.value}\nСообщение: ${message.value}\n`,
-    };
+      text: `New offer:\n${name.value}\n${age.value}\n${email.value}\n${message.value}\n`,
+    }
 
     fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
       method: "POST",
@@ -40,18 +36,11 @@ function sendForm() {
       body: JSON.stringify(data)
     })
     .then(res => res.json())
-    .then(data => {
-      console.log("Response:", data);
-      form.innerHTML = `<h1>Сообщение отправлено!</h1>`;
-      button.style.display = "none";
-      
-      // Очистка полей формы
-      inputs.forEach(input => input.value = "");
-    })
-    .catch(err => {
-      console.log(err);
-      alert("Ошибка при отправке сообщения. Попробуйте еще раз.");
-    });
+    .then(data => console.log("Response:", data))
+    .catch(err => console.log(err))
+
+    form.innerHTML = `<h1>Сообщение отправлено!</h1>`;
+    button.style.display = "none";
   }
 }
 
@@ -62,4 +51,5 @@ function openSideBar() {
 function closeSideBar() {
   sideBar.style.right = "-200px";
 }
-[file content end]
+
+const data = {title: "Hello", body: "World", userId: 1}
